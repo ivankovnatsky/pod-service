@@ -1,0 +1,41 @@
+# Pod Service Configuration
+
+server:
+  # Port to listen on
+  port: 8083
+
+  # Host to bind to (0.0.0.0 for all interfaces)
+  host: "0.0.0.0"
+
+  # Base URL for the service (used in podcast feed URLs)
+  # Use your machine's local IP address so phones/other devices can access it
+  base_url: "http://192.168.50.7:8083"
+
+podcast:
+  # Podcast metadata
+  title: "My YouTube Podcast"
+  description: "YouTube videos converted to podcast episodes"
+  author: "Ivan Kovnatsky"
+  language: "en-us"
+  category: "Technology"
+
+  # Optional: URL to podcast cover image
+  image_url: null
+
+storage:
+  # Base data directory (relative to project root)
+  data_dir: "./data"
+
+  # Audio files directory (defaults to data_dir/audio if not set)
+  audio_dir: "./data/audio"
+
+watch:
+  # Enable file watching
+  enabled: true
+
+  # File to watch for YouTube URLs
+  # Add one URL per line. Lines starting with # are ignored.
+  file: "./data/urls.txt"
+
+# Logging level: DEBUG, INFO, WARNING, ERROR
+log_level: "INFO"
